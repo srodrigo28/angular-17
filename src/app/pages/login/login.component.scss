@@ -9,14 +9,13 @@
     background-position: center bottom no-repeat;
     overflow: hidden;
 }
-
 .area-form{
     height: 100vh;
     width: 50%;
     float: left;
     background-color: #fff;
     display: flex;
-    padding: 100px;
+    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -25,6 +24,7 @@
 }
 .titulo{
     font-size: 30px;
+    margin-bottom: 70px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -38,6 +38,7 @@
     text-align: center;
     margin: 0 0 30px 0;
     text-align: center;
+    margin-bottom: 40px;
 }
 .input-form{
     overflow: hidden;
@@ -52,11 +53,10 @@
 
     }
 }
-
 .btn{
     padding: 12px;
+    width: 100%;
 }
-
 .footer{
     position: absolute;
     bottom: 4px;
@@ -71,8 +71,47 @@
     }
 }
 
-@media only screen and (max-width: 767px){ 
+@media only screen and (max-width: 800px){
     .area-form { 
+        width: 100vw;
+        background-image: url('./../../../assets/background-login.png');
+        background-size: 100% auto;
+    }
+    .titulo{
+        color: #fff;
+    }
+    .subtitulo{
+        color: #fff;
+    }
+    .btn{
         width: 100%;
-    } 
+        color: #fff;
+    }
+    .footer{
+        color: #000;
+        font-weight: 700;
+        height: 40px;
+    
+        > span{
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .area-form { 
+        padding: 20px;
+        width: 100vw;
+        > .titulo{
+            margin-bottom: 50px;
+        }
+    }
+    .mobile{
+        width: 100%;
+    }
+    .footer{
+        text-align: center;
+        padding: 10px;
+    }
 }
