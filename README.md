@@ -19,6 +19,12 @@ cd my-app
 
 ng serve
 
+#### Comandos Angular
+
+ng serve -0
+
+ng g c pages/login
+
 #### Dependências
 ng add @ng-bootstrap/ng-bootstrap
 https://ng-bootstrap.github.io/#/home
