@@ -1,0 +1,82 @@
+.card-info{
+    background-color: #fafafa;
+    padding: 14px 18px 0px 18px;
+    border: 6px;
+    margin-bottom: 20px; // adicionado margin
+    border-radius: 7px;
+    box-shadow: 0px 0px 3px 1px #00000020;
+}
+.titulo{
+    font-size: 26px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 !important;
+    color: darkviolet;
+}
+.subtitulo{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding: 26px 0px 14px 0px;
+    color: gray
+}
+span{ 
+    color: green; 
+    font-weight: 500;
+}
+.texto-card{
+    font-size: 16px;
+    font-weight: 500;
+    color: green;
+    margin-bottom: 18px;
+}
+.numero-card{
+    font-size: 28px;
+    font-weight: 500;
+    color: darkviolet;
+    margin-bottom: 18px;
+}
+.destaque-card{
+    font-size: 12px;
+    font-weight: 500;
+    color: green;
+    margin-bottom: 18px;
+}
+.info-spinner{
+    font-size: 15px;
+    font-weight: 500;
+    color: green;
+    text-align: center;
+    position: relative;
+    top: -62px
+
+}
+.text-p{
+    text-align: justify;
+}
+.container-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-perfil img{
+    width: 300px;
+}
+ul{
+    margin-left: -30px;
+}
+li{
+    display: flex;
+    margin-bottom: 16px;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    transition: .5s linear;
+}
+li:hover{
+    font-size: 1.2rem;
+    transform: translateX(3rem);
+}

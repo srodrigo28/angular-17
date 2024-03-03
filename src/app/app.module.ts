@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
-import { MatIconModule } from '@Angular/material/icon'
+import { MatIconModule } from '@Angular/material/icon';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MatIconModule } from '@Angular/material/icon'
     NgbModule,
     FormsModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"grud-angular","appId":"1:186347792529:web:b915f3bad6f822d1f2b730","storageBucket":"grud-angular.appspot.com","apiKey":"AIzaSyCJfvVYnGltl2xVmCc_4PRQV7XaClKv73E","authDomain":"grud-angular.firebaseapp.com","messagingSenderId":"186347792529","measurementId":"G-EDLLB0N22E"})),
+    provideFirestore(() => getFirestore())
   ],
   providers: [
     provideAnimationsAsync()

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "grud-angular": {
+      "hosting": {
+        "crud-usuarios": [
+          "grud-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "grud-angular"
+  }
+}

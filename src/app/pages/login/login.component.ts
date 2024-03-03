@@ -8,14 +8,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   userName : string;
+  userPassword : string;
 
   constructor(private router: Router){ }
 
   login(){
-    sessionStorage.setItem('userName', this.userName);
-    console.log("Servidor offline: " + this.userName);
-
-    this.router.navigate(['/home']);
+    if( this.userName === "" || this.userName === null || this.userName === undefined){
+      alert("Por favor preencher o campo nome")
+    }else{
+      sessionStorage.setItem('userName', this.userName);
+      this.router.navigate(['/home']);
+    }
   }
 
   registar(){

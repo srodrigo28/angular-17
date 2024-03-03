@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  userName: string | null;
+
+  ngOnInit() {
+    this.userName = sessionStorage.getItem('userName');
+  }
+
 }
