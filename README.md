@@ -1,7 +1,10 @@
 ### Crude completo com angular 17.
 
-
 https://www.udemy.com/course/curso-angular-17-crud-completo-com-firebase/learn/lecture/41591896#overview
+
+``` Ultimo visto
+https://www.udemy.com/course/curso-angular-17-crud-completo-com-firebase/learn/lecture/41830098#overview
+```
 
 #### Passos iniciais 
 
