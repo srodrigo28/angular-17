@@ -1,0 +1,54 @@
+.titulo{
+    font-size: 26px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 !important;
+    color: darkviolet;
+}
+
+.subtitulo{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 !important;
+    padding: 2px 0px 14px 0px;
+    color: gray;
+}
+
+.add-crud{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+
+}
+
+.no-data{
+    padding: 8px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    color: darkviolet;
+}
+tr{
+    height: 40px;
+}
+.th-table{
+    font-size: 14px;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+.td-table{
+    font-size: 12px;
+    font-weight: 400;
+    color: #767676;
+}
+.icone-table{
+    color: #767676;
+    margin-right: 10px;
+    transform: rotate(0deg);
+    transition: .3s linear infinite;
+    &:hover{
+        cursor: pointer;
+        color: darkviolet;
+        transform: rotate(359deg);
+    }
+}

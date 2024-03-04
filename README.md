@@ -3,7 +3,7 @@
 https://www.udemy.com/course/curso-angular-17-crud-completo-com-firebase/learn/lecture/41591896#overview
 
 ``` Ultimo visto
-https://www.udemy.com/course/curso-angular-17-crud-completo-com-firebase/learn/lecture/41830098#overview
+https://www.udemy.com/course/curso-angular-17-crud-completo-com-firebase/learn/lecture/41966992#questions
 ```
 
 #### Passos iniciais 
@@ -68,3 +68,5 @@ https://material.angular.io/guide/getting-started
 
 npm install firebase
 ng add @angular/fire
+
+https://material.angular.io/components/table/examples

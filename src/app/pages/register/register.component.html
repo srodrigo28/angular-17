@@ -1,2 +1,42 @@
-<app-menu></app-menu>
-<p>register works!</p>
+<div class="area-login-background d-none d-md-block"></div>
+
+<div class="area-form">
+    <form class="w-100">
+        <h1 class="titulo">Crud Users</h1>
+        <h2 class="subtitulo">Mais eficiência no controle de usuários</h2>
+        
+        <div class="row">
+            <div class="col">
+                <label for="nome">Nome</label>
+                <input type="text" [(ngModel)]="userName" id="nome" placeholder="digite seu nome" [ngModelOptions]="{standalone: true}" class="input-form form-control w-100" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="email">E-mail</label>
+                <input 
+                    type="text" id="email" [(ngModel)]="userEmail" placeholder="digite seu email" 
+                    [ngModelOptions]="{standalone: true}" class="input-form form-control w-100"
+                >
+            </div>
+        </div>
+
+        <label for="senha">Senha</label>
+        <input 
+            type="password" [(ngModel)]="userPassword" id="senha" placeholder="***************" 
+            [ngModelOptions]="{standalone: true}" class="input-form form-control w-100"
+        >
+        <label for="confirmar-senha">Confirmar Senha</label>
+        <input
+            id="confirmar-senha" type="password" [(ngModel)]="userPasswordConfirmar"
+            placeholder="***************" [ngModelOptions]="{standalone: true}" 
+            class="input-form form-control w-100" 
+        >
+        <div class="group-btn d-flex gap-3 justify-content-center">
+            <div class="btn btn-primary" (click)="registar()">Registar</div>
+            <div class="btn btn-warning" (click)="cancelar()">Voltar</div>
+        </div>
+    </form>
+    <p class="footer"> <span>copy 2024</span> | Desenvolvendo <span>Seb App</span> </p>
+</div>

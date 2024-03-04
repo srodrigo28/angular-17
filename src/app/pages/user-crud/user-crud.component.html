@@ -1,0 +1,80 @@
+<app-menu></app-menu>
+
+<div class="container-fluid pt-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="titulo">Cadastro de usuários</h1>
+            <h2 class="subtitulo">Gerencie usuários, adicionando, ou excluindo</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="btn btn-primary add-crud">+ Adicionar</div>
+            <mat-form-field>
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+            </mat-form-field>
+
+            <table class="mat-elevantion-z8" mat-table [dataSource]="dataSource" matSort>
+
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                  <td class="td-table" mat-cell *matCellDef="let users"> {{users.firebaseId}} </td>
+                </ng-container>
+            
+                <!-- Progress Column -->
+                <ng-container matColumnDef="name">
+                  <th class="th-table"  mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+                  <td class="td-table" mat-cell *matCellDef="let users"> {{users.name}}% </td>
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="email">
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
+                  <td class="td-table" mat-cell *matCellDef="let users"> {{users.email}} </td>
+                </ng-container>
+            
+                <!-- Fruit Column -->
+                <ng-container matColumnDef="role">
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Cargo </th>
+                  <td class="td-table" mat-cell *matCellDef="let users"> {{users.role}} </td>
+                </ng-container>
+
+                <!-- Fruit Column -->
+                <ng-container matColumnDef="benefits">
+                    <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Beneficios </th>
+                    <td class="td-table" mat-cell *matCellDef="let users">
+                        <!-- Opção 1 -->
+                        <!-- <mat-icon class="bg-primary" *ngIf="users.healthPlan || users.dentalPlan">check</mat-icon>
+                        <mat-icon class="bg-danger" *ngIf="users.healthPlan && users.dentalPlan">remove</mat-icon> -->
+
+                        <!-- Opção 2 -->
+                        @if(users.healthPlan || users.dentalPlan){ <mat-icon class="bg-primary">check</mat-icon> }
+                        @if(users.healthPlan && users.dentalPlan){ <mat-icon class="bg-danger">remove</mat-icon> }
+                    </td>
+                  </ng-container>
+
+                <!-- Ações Column -->
+                <ng-container matColumnDef="actions">
+                    <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Ações </th>
+                    <td class="td-table" mat-cell *matCellDef="let users">
+                        <mat-icon class="icone-table">visibility</mat-icon>
+                        <mat-icon class="icone-table">edit</mat-icon>
+                        <mat-icon class="icone-table">delete</mat-icon>
+                    </td>
+                </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  
+                <!-- Row shown when there is no matching data. -->
+                <tr class="mat-row" *matNoDataRow>
+                  <td class="mat-cell" colspan="4">Não foi encontrado usuários para a pesquisa: "{{input.value}}"</td>
+                </tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[3, 5, 7]" aria-label="Selecione usuários por página"></mat-paginator>
+        </div>
+    </div>
+</div>

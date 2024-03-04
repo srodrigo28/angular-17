@@ -22,7 +22,6 @@ export class LoginComponent {
   }
 
   registar(){
-    console.log("Servidor offline");
     this.router.navigate(['/register']);
   }
 }
