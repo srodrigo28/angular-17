@@ -21,8 +21,16 @@
     color: gray
 }
 span{ 
-    color: green; 
+    color: darkviolet; 
     font-weight: 500;
+}
+.new-success{
+    color: #fff;
+    font-weight: 400;
+    background-color: darkviolet;
+}
+.new-success:hover{
+    box-shadow: #00000010;
 }
 .texto-card{
     font-size: 16px;

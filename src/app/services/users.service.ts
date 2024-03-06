@@ -6,14 +6,13 @@ import { User } from './user';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
 
   constructor(private dataBaseStore: AngularFirestore) { }
 
   getAllUsers(){
-    return this.dataBaseStore.collection(
-      'users', user => user.orderBy('name')
-      ).valueChanges({idField: 'firebaseId'}) as Observable<any[]>;
+    return this.dataBaseStore.collection('users', user => user.orderBy('name')).valueChanges({idField: 'firebaseId'});
   }
   addUser(user: User){
     return this.dataBaseStore.collection('users').add(user);
