@@ -53,7 +53,7 @@
                         @if(user.healthPlan || user.dentalPlan){
                            <mat-icon class="c-primary">check</mat-icon> 
                           }
-                        @if(user.healthPlan && !user.dentalPlan){
+                        @if(!user.healthPlan && !user.dentalPlan){
                           <mat-icon class="c-danger">remove</mat-icon>
                         }
                     </td>
@@ -63,7 +63,7 @@
                 <ng-container matColumnDef="actions">
                     <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Ações </th>
                     <td class="td-table" mat-cell *matCellDef="let user">
-                        <mat-icon class="icone-table">visibility</mat-icon>
+                        <mat-icon class="icone-table" (click)="openModalViewUser(user)" >visibility</mat-icon>
                         <mat-icon class="icone-table">edit</mat-icon>
                         <mat-icon class="icone-table">delete</mat-icon>
                     </td>
@@ -78,7 +78,7 @@
                 </tr>
               </table>
             
-              <mat-paginator class="shadow-lg" [pageSizeOptions]="[3, 5, 7]" aria-label="Selecione usuários por página"></mat-paginator>
+              <mat-paginator class="shadow-sm"  [pageSizeOptions]="[3, 5, 7]" aria-label="Selecione usuários por página"></mat-paginator>
         </div>
     </div>
 </div>

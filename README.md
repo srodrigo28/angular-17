@@ -20,7 +20,7 @@ npx ng new my-app-angular
 
 cd my-app
 
-ng serve
+#### ng serve
 
 #### Comandos Angular
 
@@ -33,6 +33,8 @@ ng g environments
 ng g service services/users
 
 ng g interface services/user
+
+ng g c pages/user-crud/modal-view-user
 
 #### Firebase
 apelido firebase : app-angular

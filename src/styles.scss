@@ -5,3 +5,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+:root{
+    --primary-color: #7533a8;
+    --error-color: #da1010;
+    --gray-color: #747474;
+}
+
+.c-primary{ color: var(--primary-color); }
+.c-error{ color: var(--primary-color); }
+.c-gray{ color: var(--primary-color); }
+
+.hover:hover{ cursor: point; }

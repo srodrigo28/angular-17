@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { User } from '../../services/user';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalViewUserComponent } from './modal-view-user/modal-view-user.component';
 
 @Component({
   selector: 'app-user-crud',
@@ -20,7 +22,10 @@ export class UserCrudComponent {
 
   listUsers: User[] = [];
 
-  constructor(private usersService: UsersService){
+  constructor(
+      private usersService: UsersService,
+      public dialog: MatDialog
+    ){
     this.dataSource = new MatTableDataSource<any>(this.listUsers);
   }
 
@@ -56,5 +61,13 @@ export class UserCrudComponent {
     }
   }
 
+  // logica do modal
+  openModalViewUser(user: User){
+    this.dialog.open(ModalViewUserComponent, {
+      width: '700px',
+      height: '360px',
+      data: user
+    })
+  }
   
 }

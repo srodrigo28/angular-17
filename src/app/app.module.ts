@@ -20,6 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator'
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.development';
 import { ClienteComponent } from './pages/cliente/cliente.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalViewUserComponent } from './pages/user-crud/modal-view-user/modal-view-user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ClienteComponent } from './pages/cliente/cliente.component';
     RegisterComponent,
     MenuComponent,
     UserCrudComponent,
-    ClienteComponent
+    ClienteComponent,
+    ModalViewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { ClienteComponent } from './pages/cliente/cliente.component';
     MatInput,
     MatPaginatorModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [

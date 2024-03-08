@@ -7,5 +7,4 @@ export interface User {
     firebaseId?: string;
     healthPlan?: string;
     dentalPlan?: string;
-
 }
