@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <div class="btn btn-primary add-crud">+ Adicionar</div>
+        <div class="col-12">
+            <div class="btn btn-primary add-crud" (click)="openModalAddUser()">+ Adicionar</div>
             <mat-form-field>
                 <mat-label>Filter</mat-label>
                 <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>

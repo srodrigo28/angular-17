@@ -1,0 +1,42 @@
+<div class="container-fluid p-3">
+    <mat-icon class="float-end hover" (click)="closeModal()">X</mat-icon>
+
+    <h1 class="titulo">Adicionar Novo</h1>
+    <h2 class="subtitulo"></h2>
+
+    <form class="row" [formGroup]="formUser">
+        <div class="col-12 mb-2">
+            <mat-form-field class="example-full-width col-6">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput formControlName="name" placeholder="Digite seu nome">
+                @if (formUser.controls['name'].invalid) {
+                    <mat-error>Por favor digitar um nome valido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width col-6">
+                <mat-label>e-mail</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Digite seu e-mail">
+                @if (formUser.controls['email'].invalid) {
+                    <mat-error>Por favor digitar um e-mail valido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Setor</mat-label>
+                <input type="text" matInput formControlName="sector" placeholder="Digite seu setor">
+                @if (formUser.controls['sector'].invalid) {
+                    <mat-error>Por favor digitar um setor valido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Cargo</mat-label>
+                <input type="text" matInput formControlName="role" placeholder="Digite seu cargo">
+                @if (formUser.controls['role'].invalid) {
+                    <mat-error>Por favor digitar um cargo valido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+    </form>
+</div>

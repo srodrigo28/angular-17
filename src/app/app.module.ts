@@ -7,7 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
@@ -22,6 +22,7 @@ import { environment } from '../environments/environment.development';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalViewUserComponent } from './pages/user-crud/modal-view-user/modal-view-user.component';
+import { ModalFormUserComponent } from './pages/user-crud/modal-form-user/modal-form-user.component';
 
 @NgModule({
   declarations: [
@@ -32,17 +33,19 @@ import { ModalViewUserComponent } from './pages/user-crud/modal-view-user/modal-
     MenuComponent,
     UserCrudComponent,
     ClienteComponent,
-    ModalViewUserComponent
+    ModalViewUserComponent,
+    ModalFormUserComponent
   ],
   imports: [
     BrowserModule,
+    MatInput,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInput,
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatDialogModule,
