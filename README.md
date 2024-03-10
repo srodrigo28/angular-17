@@ -14,6 +14,8 @@ npm install -g @angular/cli --force
 
 ng new crud-usuarios --no-standalone
 
+npx ng new angular-app --no-standalone
+
 ng new my-app-angular
 
 npx ng new my-app-angular
